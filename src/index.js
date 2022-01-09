@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Header from './components/Header';
+import DataSet from './components/DataSet';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <DataSet />
   </React.StrictMode>,
   document.getElementById('root')
 );
