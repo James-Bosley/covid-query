@@ -10,7 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#header, #dataSet, #results {
+#header, #dataSet, #results, #footer {
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -20,12 +20,22 @@ h2 {
   margin: 10px;
 }
 
-select, #dateSelect, button {
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+select, #dateSelect, #regionSelect, button {
   height: 25px;
   margin: 10px;
   border-radius: 3px;
   border-style: inset;
   border: 2px solid grey;
+}
+
+select {
+  height: 30px;
 }
 
 #dataReq {
@@ -43,7 +53,7 @@ button {
   font-weight: bold;
   font-size: 1.1em;
   margin-top: 20px;
-  width: 100px;
+  width: 120px;
   height: 30px;
   box-shadow: none;
 }
@@ -71,7 +81,7 @@ th {
 }
 
 td {
-  min-width: 120px;
+  min-width: 150px;
   border: 1px solid gray;
   padding: 5px;
   text-align: left;

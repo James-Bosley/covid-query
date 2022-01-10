@@ -5,10 +5,6 @@ const nations = [
   {name: 'Northern Ireland', filterTerm:'northern ireland', id: 4}
 ]
 
-const utlas = []
-
-const ltlas = []
-
 const dataPoints = [
   {name: 'Daily Cases', filterTerm: 'newCasesByPublishDate', category: 'cases', id: 1},
   {name: 'Cumulative Cases', filterTerm: 'cumCasesByPublishDate', category: 'cases', id: 2},
@@ -20,4 +16,4 @@ const dataPoints = [
   {name: 'Cumulative Vaccinations', filterTerm: 'cumPeopleVaccinatedCompleteByPublishDate', category: 'vaccine', id: 8}
 ]
 
-export { nations, utlas, ltlas, dataPoints };
+export { nations, dataPoints };
