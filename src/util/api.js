@@ -19,12 +19,24 @@ const getData = async (filters, dataPoints) => {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }});
-  if (response.ok) {
+  if (response.ok && response.status === 200) {
     const jsonResponse = await response.json();
     return jsonResponse.data;
   } else {
-    return 'Error: Data not available.'
+    return 'Data not available for selected parameters.'
   }
 }
 
-export { getData };
+const getAnnouncement = async () => {
+  const response = await fetch('https://api.coronavirus.data.gov.uk/generic/announcements/latest', {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+  }});
+  if (response.ok) {
+    const jsonresponse = await response.json();
+    return jsonresponse;
+  }
+}
+
+export { getData, getAnnouncement };
