@@ -29,7 +29,7 @@ const Form = () => {
           return target.checked ? [...prev, value] : prev.filter(x => x.id !== value.id);
         });
         break;
-      default: throw new Error('Input not recognised.')
+      default: throw new Error('Input not recognised.');
     }
   }
 
@@ -72,8 +72,9 @@ const Form = () => {
           {dataPoints.map(dataPoint => {
             return (
               <div key={dataPoint.id} className='dataPoint'>
-                <input value={JSON.stringify(dataPoint)} onChange={handleChange} type='checkbox' name='fields' />
-                <label>{dataPoint.name}</label>
+                <label>
+                  <input value={JSON.stringify(dataPoint)} onChange={handleChange} type='checkbox' name='fields' />
+                {dataPoint.name}</label>
               </div>
             )
           })}
@@ -83,7 +84,7 @@ const Form = () => {
       <Results data={data} />
       <button onClick={() => window.location.reload()}>Reset Form</button>
     </div>
-  )
-}
+  );
+};
 
 export default Form;
